@@ -18,8 +18,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Hakan\Desktop\mvc_project\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Hakan/Desktop/mvc_project/WebApplication1/Views/Home/Convert.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb252ZXJ0LmNzaHRtbA==
+[C:/Users/Hakan/Desktop/mvc_project/WebApplication1/Views/Currency/CurrencyConvert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVuY3lcQ3VycmVuY3lDb252ZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Hakan/Desktop/mvc_project/WebApplication1/Views/Home/Index.cshtml]

@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Kur Hesapla";
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Kur Dönüşüm Hesaplama</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>@ViewBag.Currency Kuru Hesapla</h2>
+
+    <form method="post">
+        <div class="form-group">
+            <label for="amount">Miktar:</label>
+            <input type="number" id="amount" name="amount" class="form-control" placeholder="Miktar girin" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2">Hesapla</button>
+    </form>
+
+    @if (ViewBag.Result != null)
+    {
+        <div class="mt-2 alert alert-success alert-dismissible fade show" role="alert">
+            <strong>@ViewBag.Amount @ViewBag.Currency = @ViewBag.Result TL.</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    
+</body>
+</html>

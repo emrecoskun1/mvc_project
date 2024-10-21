@@ -29,3 +29,6 @@ C:\Users\Hakan\Desktop\mvc_project\WebApplication1\obj\Debug\net8.0\refint\WebAp
 C:\Users\Hakan\Desktop\mvc_project\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Users\Hakan\Desktop\mvc_project\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Users\Hakan\Desktop\mvc_project\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+C:\Users\Hakan\Desktop\mvc_project\WebApplication1\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\Hakan\Desktop\mvc_project\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\Hakan\Desktop\mvc_project\WebApplication1\obj\Debug\net8.0\WebAppli.7D14BD69.Up2Date
