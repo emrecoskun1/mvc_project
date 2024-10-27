@@ -1,8 +1,73 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model CurrencyModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Güncel Döviz Kurları</h1>
+
+@if (ViewBag.Error == 0)
+{
+    <p>Son Güncelleme: @Model.Update_Date</p>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Para Birimi</th>
+                <th>Alış</th>
+                <th>Satış</th>
+                <th>Değişim</th>
+                <th>TL Hesapla</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Amerikan Doları</td>
+                <td>@Model.USD.Alış</td>
+                <td>@Model.USD.Satış</td>
+                <td>@Model.USD.Değişim</td>
+                <td>
+                    <a href="@Url.Action("CurrencyConvert", "Currency", new { currency = "Amerikan Doları", rate = ViewBag.UsdRate })" class="btn btn-primary">Kur Hesapla</a>
+                </td>
+            </tr>
+            <tr>
+                <td>EURO</td>
+                <td>@Model.EUR.Alış</td>
+                <td>@Model.EUR.Satış</td>
+                <td>@Model.EUR.Değişim</td>
+                <td>
+                    <a href="@Url.Action("CurrencyConvert", "Currency", new { currency = "EURO", rate = ViewBag.EurRate })" class="btn btn-primary">Kur Hesapla</a>
+                </td>
+            </tr>
+            <tr>
+                <td>İngiliz Sterlini</td>
+                <td>@Model.GBP.Alış</td>
+                <td>@Model.GBP.Satış</td>
+                <td>@Model.GBP.Değişim</td>
+                <td>
+                    <a href="@Url.Action("CurrencyConvert", "Currency", new { currency = "İngiliz Sterlini", rate =  ViewBag.GbpRate })" class="btn btn-primary">Kur Hesapla</a>
+                </td>
+            </tr>
+            <tr>
+                <td>İsviçre Frangı</td>
+                <td>@Model.CHF.Alış</td>
+                <td>@Model.CHF.Satış</td>
+                <td>@Model.CHF.Değişim</td>
+                <td>
+                    <a href="@Url.Action("CurrencyConvert", "Currency", new { currency = "İsviçre Frangı", rate =  ViewBag.ChfRate })" class="btn btn-primary">Kur Hesapla</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Katar Dinarı</td>
+                <td>@Model.QAR.Alış</td>
+                <td>@Model.QAR.Satış</td>
+                <td>@Model.QAR.Değişim</td>
+                <td>
+                    <a href="@Url.Action("CurrencyConvert", "Currency", new { currency = "Katar Dinarı", rate =  ViewBag.QarRate })" class="btn btn-primary">Kur Hesapla</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Hata</strong>
+    </div>
+}
